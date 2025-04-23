@@ -1,0 +1,38 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/* Center the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the screen */
+    text-align: center;
+  }
+  
+  /* Style the form fields */
+  .form-control {
+    font-size: 18px; /* Increase the font size */
+    padding: 12px; /* Add some padding */
+    margin-bottom: 20px; /* Space between fields */
+  }
+  
+  /* Style the buttons */
+  button[type="submit"] {
+    font-size: 20px; /* Increase button text size */
+    padding: 12px 24px; /* Make the button bigger */
+  }
+  
+  /* Optional: Style the page heading */
+  h1 {
+    font-size: 32px; /* Make the heading bigger */
+    margin-bottom: 20px;
+  }
+  

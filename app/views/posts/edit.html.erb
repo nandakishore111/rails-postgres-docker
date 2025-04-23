@@ -1,0 +1,16 @@
+<% content_for :title, "Editing post" %>
+
+<div style="text-align: center; margin-top: 50px;">
+  <h1>Editing post</h1>
+
+  <div style="display: inline-block; text-align: left;">
+    <%= render "form", post: @post %>
+  </div>
+
+  <br>
+
+  <div style="margin-top: 20px;">
+    <%= link_to "Show this post", @post, style: "margin: 0 10px;" %>
+    <%= link_to "Back to posts", posts_path, style: "margin: 0 10px;" %>
+  </div>
+</div>

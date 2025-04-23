@@ -1,0 +1,21 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="width: 100%; max-width: 500px; text-align: center;">
+    <h1>Create New Post</h1>
+
+    <%= form_with(model: @post, local: true) do |form| %>
+      <div style="margin-bottom: 15px; text-align: left;">
+        <%= form.label :title %><br>
+        <%= form.text_field :title, style: "width: 100%;" %>
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <%= form.label :body %><br>
+        <%= form.text_area :body, style: "width: 100%;" %>
+      </div>
+
+      <div style="text-align: left;">
+        <%= form.submit "Create Post", style: "padding: 8px 20px;" %>
+      </div>
+    <% end %>
+  </div>
+</div>
