@@ -13,7 +13,31 @@ This project sets up a **Ruby on Rails** application with **PostgreSQL** and aut
 
 In the first step, a simple **Ruby on Rails** application was built, featuring basic CRUD operations to create posts. The database used is **PostgreSQL**, running in a separate container.
 
+### Access the App Locally
 
+To access the app locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/repositoryname.git
+   cd repositoryname
+   
+2. Install the dependencies:
+   ```bash
+   bundle install
+   yarn install
+   
+3. Set up the database:
+   ```bash
+   rails db:create
+   rails db:migrate
+   
+4. Run the Rails server:
+   ```bash
+   rails server
+
+5. Open your browser and navigate to: http://localhost:3000/posts/new
+   
 - **Dockerfile**: We created a Dockerfile to containerize the Rails application.
 - **docker-compose.yml**: Used to define and manage multi-container Docker applications for the Rails app and PostgreSQL.
 
