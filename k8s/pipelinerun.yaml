@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: build-pipelinerun
+spec:
+  pipelineRef:
+    name: build-pipeline
+  serviceAccountName: default
+  params:
+    - name: git-source
+      value: https://github.com/nandakishore111/rails-postgres-docker.git
+    - name: image
+      value: "docker.io/dockernanda777/rails-app"
+  workspaces:
+    - name: shared-workspace
+      volumeClaimTemplate:
+        metadata:
+          name: buildah-pvc
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi
+ 
+

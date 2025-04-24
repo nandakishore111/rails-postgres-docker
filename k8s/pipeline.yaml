@@ -1,0 +1,30 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: build-pipeline
+spec:
+  workspaces:
+    - name: shared-workspace
+  tasks:
+    - name: clone-repo
+      taskRef:
+        name: build-docker-image
+      params:
+        - name: url
+          value: https://github.com/nandakishore111/rails-postgres-docker.git
+        - name: revision
+          value: "main"
+      workspaces:
+        - name: source
+          workspace: shared-workspace
+
+    - name: build-image
+      taskRef:
+        name: buildah
+      params:
+        - name: IMAGE
+          value: "docker.io/dockernanda777/rails-app"
+      workspaces:
+        - name: source
+          workspace: shared-workspace
+

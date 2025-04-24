@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineResource
+metadata:
+  name: git-source
+spec:
+  type: git
+  params:
+    - name: url
+      value: "https://github.com/nandakishore111/rails-postgres-docker.git"
+    - name: revision
+      value: "main"
+
