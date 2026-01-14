@@ -100,7 +100,7 @@ kubectl get svc
 
 ---
 
-## Built With 🛠️
+## Built With 
 
 - **Ruby on Rails**: Framework for building the application.
 - **Docker**: Containerization of the application.
@@ -120,14 +120,6 @@ kubectl get svc
 
 ---
 
-## 🤝 Contributions
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
-
----
-
-## Show Your Support
-
-Give a ⭐️ if you like this project!
 
 
